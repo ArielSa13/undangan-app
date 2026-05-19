@@ -1,0 +1,131 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Package;
+use Illuminate\Database\Seeder;
+
+class PackageSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $packages = [
+            [
+                'name' => 'Basic',
+                'slug' => 'basic',
+                'tier' => 'basic',
+                'description' => 'Paket dasar untuk undangan digital sederhana dan elegan.',
+                'price' => 99000,
+                'discount_price' => null,
+                'duration_days' => 365,
+                'max_photos' => 5,
+                'max_guests' => 100,
+                'max_templates' => 1,
+                'has_rsvp' => false,
+                'has_music' => false,
+                'has_guestbook' => true,
+                'has_gallery' => true,
+                'has_countdown' => true,
+                'has_maps' => true,
+                'has_love_story' => false,
+                'has_digital_envelope' => false,
+                'has_qr_checkin' => false,
+                'has_custom_domain' => false,
+                'has_analytics' => false,
+                'has_whatsapp_blast' => false,
+                'sort_order' => 1,
+                'features' => [
+                    '1 Template Pilihan',
+                    'Maksimal 5 Foto',
+                    'Maksimal 100 Tamu',
+                    'Buku Tamu',
+                    'Galeri Foto',
+                    'Countdown Timer',
+                    'Google Maps',
+                    'Berlaku 1 Tahun',
+                ],
+            ],
+            [
+                'name' => 'Premium',
+                'slug' => 'premium',
+                'tier' => 'premium',
+                'description' => 'Paket lengkap dengan fitur RSVP, musik, dan unlimited foto.',
+                'price' => 249000,
+                'discount_price' => 199000,
+                'duration_days' => 365,
+                'max_photos' => 999,
+                'max_guests' => 500,
+                'max_templates' => 3,
+                'has_rsvp' => true,
+                'has_music' => true,
+                'has_guestbook' => true,
+                'has_gallery' => true,
+                'has_countdown' => true,
+                'has_maps' => true,
+                'has_love_story' => true,
+                'has_digital_envelope' => true,
+                'has_qr_checkin' => false,
+                'has_custom_domain' => false,
+                'has_analytics' => true,
+                'has_whatsapp_blast' => false,
+                'sort_order' => 2,
+                'features' => [
+                    '3 Template Premium',
+                    'Unlimited Foto',
+                    'Maksimal 500 Tamu',
+                    'RSVP System',
+                    'Background Music',
+                    'Buku Tamu',
+                    'Love Story Timeline',
+                    'Amplop Digital',
+                    'Analytics',
+                    'Berlaku 1 Tahun',
+                ],
+            ],
+            [
+                'name' => 'Exclusive',
+                'slug' => 'exclusive',
+                'tier' => 'exclusive',
+                'description' => 'Paket paling lengkap dengan semua fitur premium tanpa batas.',
+                'price' => 499000,
+                'discount_price' => 399000,
+                'duration_days' => 365,
+                'max_photos' => 9999,
+                'max_guests' => 9999,
+                'max_templates' => 999,
+                'has_rsvp' => true,
+                'has_music' => true,
+                'has_guestbook' => true,
+                'has_gallery' => true,
+                'has_countdown' => true,
+                'has_maps' => true,
+                'has_love_story' => true,
+                'has_digital_envelope' => true,
+                'has_qr_checkin' => true,
+                'has_custom_domain' => true,
+                'has_analytics' => true,
+                'has_whatsapp_blast' => true,
+                'sort_order' => 3,
+                'features' => [
+                    'Semua Template Premium',
+                    'Unlimited Foto',
+                    'Unlimited Tamu',
+                    'RSVP System',
+                    'Background Music',
+                    'Buku Tamu',
+                    'Love Story Timeline',
+                    'Amplop Digital',
+                    'QR Check-in Tamu',
+                    'Custom Domain',
+                    'Analytics Lengkap',
+                    'WhatsApp Blast',
+                    'Berlaku 1 Tahun',
+                ],
+            ],
+        ];
+
+        foreach ($packages as $package) {
+            Package::create($package);
+        }
+    }
+}
